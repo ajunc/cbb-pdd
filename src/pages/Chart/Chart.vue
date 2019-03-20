@@ -10,5 +10,7 @@ export default {
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
     .chart
+        height 100%;
+        width 100%;
         background-color red;
 </style>

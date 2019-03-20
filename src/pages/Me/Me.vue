@@ -10,5 +10,7 @@ export default {
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
     .me
+        height 100%;
+        width 100%;
         background-color yellow;
 </style>

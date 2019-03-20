@@ -10,5 +10,7 @@ export default {
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
     .recommend
+        height 100%;
+        width 100%;
         background-color #999999;
 </style>

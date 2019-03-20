@@ -4,9 +4,11 @@
         v-model="selectedId"
         :items="items"
         :options="options"
-      >
+        @change="handleChange"
+        class="fix"
+      />
 
-      </ly-tab>
+      <router-view></router-view>
     </div>
 </template>
 
@@ -30,7 +32,14 @@ export default {
       ],
       options:{
         activeColor: '#e9232c'
-      }
+      },
+      subRouteUrl: ['/home/hot','/home/dress','/home/box','/home/mbaby','/home/general','/home/food','/home/shirt','/home/man','/home/ele']
+    }
+  },
+  methods: {
+    handleChange(item, index) {
+      //console.log(item,index);
+      this.$router.replace(this.subRouteUrl[index])
     }
   }
 }
@@ -38,5 +47,12 @@ export default {
 
 <style scoped lang="stylus" ref="stylesheet/stylus">
     .home
+        height 100%;
+        width 100%;
         background-color blue;
+        .fix
+            position fixed
+            left 0
+            top 0
+            z-index 998
 </style>
